@@ -1,15 +1,20 @@
 # Spotlight
-Spotlight is an Android library used to onboard users by showcasing specific features in the app.
 
-[![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
-<img src="https://img.shields.io/badge/license-Apache 2.0-green.svg?style=flat">
-[![API](https://img.shields.io/badge/API-11%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=11)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Spotlight-green.svg?style=flat)](http://android-arsenal.com/details/1/3730)
+### 一分钟实现引导界面
 
-#Screen
+* 在github上面看到一个不错的国外开源项目，主要实现欢迎或者引导界面，为了方便大家学习，本人把英文版本的开源项目翻译成中文版本，并且代码已经运行而且运用到项目当中，实测问题不大，如果各位感觉这样的行为比较挫，或者比较鄙视这种行为可以参考原文英文版本，英文版本链接如下：
+
+* 英文 原链接如下：https://github.com/wooplr/Spotlight
+
+
+
+
+# Screen
+
 <img src="https://raw.githubusercontent.com/wooplr/Spotlight/master/art/intro.gif?token=AA5ZAHdvAspW6Zj8YyyKamkV7jWXFtMHks5XaQovwA%3D%3D"/>
 
-#Usage
+### 把如下代码拷贝到JAVA代码中：
+
 ```java
 new SpotlightView.Builder(this)
         .introAnimationDuration(400)
@@ -56,114 +61,3 @@ new SpotlightView.Builder(this)
     }
     ```
 
-### Maven
-
-1. Define the jitpack remote Maven repository in your `pom.xml` at the end of repositories
-
-    ```xml
-    <repositories>
-        ...
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-    ```
-
-2. Add the Spotlight dependency
-
-    ```xml
-    <dependency>
-        <groupId>com.github.wooplr</groupId>
-        <artifactId>Spotlight</artifactId>
-        <version>1.2.3</version>
-    </dependency>
-    ```
-
-# Builder Methods
-
-### maskColor(int)
-Overlay Color
-
-### target(View)
-View to showcase
-
-### introAnimationDuration(long)
-Intro animation duration (For Reveal and Fadein)
-
-### enableRevealAnimation(boolean)
-Enable reveal animation (Only for Lollipop and above)
-
-### fadeinTextDuration(long)
-Fade in animation duration for spotlight text (Heading and Sub-heading)
-
-### headingTvSize(int)
-Size of heading text
-
-### headingTvColor(int)
-Color of heading text
-
-### headingTvText(CharSequence)
-Text to display in heading
-
-### subHeadingTvSize(int)
-Size of sub-heading text
-
-### subHeadingTvColor(int)
-Color of sub-heading text
-
-### subHeadingTvText(CharSequence)
-Text to display in sub-heading
-
-### setTypeface(Typeface)
-Custom font for text in spotlight view
-
-### lineAndArcColor(int)
-Color of the spotlight line
-
-### lineAnimDuration(long)
-Line animation duration
-
-### performClick(boolean)
-Perform a click on target view
-
-### usageId(String)
-Unique id for each spotlight
-
-### dismissOnTouch(boolean)
-Dismiss spotlight on touch outside
-
-### enableDismissAfterShown(boolean)
-Dismiss spotlight on touch outside after spotlight is completely visible
-
-# Configuration Method
-```java
-//Create global config instance to reuse it
-SpotlightConfig config = new SpotlightConfig();
-config.isDismissOnTouch(true);
-config.setLineAndArcColor(0xFFFFFFFF);
-...
-.setConfiguration(config)
-```
-
-#Author
-
-[Jitender Chaudhary](https://github.com/29jitender)
-
-#Proguard rules
-
-```java
--keep class com.wooplr.spotlight.** { *; }
--keep interface com.wooplr.spotlight.**
--keep enum com.wooplr.spotlight.**
-```
-
-#Credits
-[MaterialIntroView](https://github.com/iammert/MaterialIntroView)
-
-[Rahul Khanna](https://www.linkedin.com/in/rahul-khanna-01705827)
-
-[Suraj Barthy](https://dribbble.com/thesbdesign)
-
-## License
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt)
